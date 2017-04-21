@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="FocusManager.widget.FocusManager" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Focus Manager</name>
+    <description>You can use this widget to set the visibility of an item based on a microflow</description>
+
+    <icon />
+
+    <properties>        
+        <property key="focusEvents" type="object" isList="true">
+            <caption>Focus events</caption>
+            <category>Configurations</category>
+            <description>Allows you to configure an event that changes user focus</description> 
+            <properties>
+                <property key="event" type="string">
+                    <caption>Event</caption>
+                    <category>Configurations</category>
+                    <description>The event you wish to subscribe to. For a list of events see jQuery documentation (http://api.jquery.com/category/events/event-handler-attachment/).</description>
+                </property>
+                <property key="evTarget" type="string">
+                    <caption>Listened object</caption>
+                    <category>Configurations</category>
+                    <description>Object(s) listened, please use selectors for this field (http://www.w3schools.com/cssref/css_selectors.asp). For example: .mx-button</description>
+                </property>
+                <property key="focusTarget" type="string">
+                    <caption>Focus target</caption>
+                    <category>Configurations</category>
+                    <description>Object to be targeted, please use a selector that returns a single object.</description>
+                </property>
+                <property key="condition" type="string" required="false">
+                    <caption>Condition</caption>
+                    <category>Configurations</category>
+                    <description>Optional, allows conditional focus. For details please see the documentation.</description>
+                </property>
+            </properties>
+        </property>
+   <!-- No longer needed - credit to jQuery.On
+        <property key="refreshEvents" type="boolean" defaultValue="false">
+            <caption>Refresh events</caption>
+            <category>Configurations</category>
+            <description></description>
+        </property>-->
+    </properties>
+</widget>
+
